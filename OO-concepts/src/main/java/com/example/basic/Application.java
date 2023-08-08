@@ -18,21 +18,5 @@ public class Application {
         e1.doLearn();
 
 
-//        A a = new A();
-//        a.aInstanceMethod();
-//
-//        B b = new B();
-//        b.bInstanceMethod();
-
-//        C c = new C();
-//        c.cInstanceMethod();
-
-//        D d = new D();
-//        d.dInstanceMethod();
-
-//        E e = new E();
-//        e.eInstanceMethod();
-
-
     }
 }
