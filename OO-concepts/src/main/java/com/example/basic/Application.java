@@ -1,12 +1,6 @@
-package com.example;
+package com.example.basic;
 
-import com.example.access.p1.A;
-import com.example.access.p1.B;
-import com.example.access.p1.C;
-import com.example.access.p2.D;
-import com.example.access.p2.E;
-
-public class Application1 {
+public class Application {
     public static void main(String[] args) {
 
         Employee.tnrName = "Nag";
