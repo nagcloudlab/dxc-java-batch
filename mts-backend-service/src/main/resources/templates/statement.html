@@ -9,16 +9,37 @@
 <div class="container">
     <div class="display-1">mts</div>
     <hr/>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="/transfer">Transfer</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/statement">Statement</a>
+        </li>
+    </ul>
+    <hr/>
     <div class="row">
         <div class="col-6">
-            <div class="card">
-                <div class="card-header">Transfer Status</div>
-                <div class="card-body">
-                    <div class="alert alert-info">
-                        <span th:text="${message}"></span>
-                    </div>
-                </div>
-            </div>
+           <table class="table table-bordered table-striped">
+               <thead>
+               <tr>
+                   <th scope="col">Txn-Id</th>
+                   <th scope="col">Date</th>
+                   <th scope="col">Amount</th>
+                   <th scope="col">Type</th>
+                   <th scope="col">Account</th>
+               </tr>
+               </thead>
+               <tbody>
+                <tr th:each="txn: ${transactionHistories}">
+                    <td th:text="${txn.id}"></td>
+                    <td th:text="${txn.dateTime}"></td>
+                    <td th:text="${txn.amount}"></td>
+                    <td th:text="${txn.transactionType}"></td>
+                    <td th:text="${txn.accountNumber}"></td>
+                </tr>
+               </tbody>
+           </table>
         </div>
     </div>
 </div>
