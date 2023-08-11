@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card-header">Cart View</div>
+    <div class="card-body">
+        <table class="table" *ngIf="cart.length>0">
+            <tbody>
+                <tr *ngFor="let cartLine of cart" appHighlight>
+                    <th scope="row">{{cartLine.id}}</th>
+                    <td>{{cartLine.name}}</td>
+                    <td>{{cartLine.price}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div *ngIf="cart.length===0">
+            <div class="alert alert-warning">
+                Empty
+            </div>
+        </div>
+    </div>
+</div>

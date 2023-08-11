@@ -1,0 +1,29 @@
+<div class="row" appHighlight>
+    <div class="col-4">
+        <img [src]="product.imageUrl" class="img-fluid" alt="product.name" />
+    </div>
+    <div class="col-8">
+        <div>{{product.name|uppercase}}</div>
+        <div>{{product.price|discount|currency:product.currencyCode}}</div>
+        <button [disabled]="!product.isAvailable" (click)="handleBuy($event,product.id)"
+            class="btn btn-primary">Buy</button>
+        <br />
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a (click)="handleTabChange(1)" [ngClass]="{'nav-link':true,'active':isTabActive(1)}"
+                    href="#">Description</a>
+            </li>
+            <li class="nav-item">
+                <a (click)="handleTabChange(2)" [ngClass]="{'nav-link':true,'active':isTabActive(2)}"
+                    href="#">Specification</a>
+            </li>
+            <li class="nav-item">
+                <a (click)="handleTabChange(3)" [ngClass]="{'nav-link':true,'active':isTabActive(3)}"
+                    href="#">Reviews</a>
+            </li>
+        </ul>
+        <div *ngIf="isTabActive(1)">{{product.description|slice:0:500}}</div>
+        <div *ngIf="isTabActive(2)">Not Yet</div>
+        <div *ngIf="isTabActive(3)">None Yet</div>
+    </div>
+</div>

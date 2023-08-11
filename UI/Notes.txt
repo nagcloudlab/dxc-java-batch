@@ -1,0 +1,66 @@
+
+
+
+UI = data + style + behavior
+Web UI =  HTML + CSS + javascript 
+
+----------------------------------------------------------------
+
+
+challenges while working with browser-api's directly
+
+
+-> browser compatability issues
+-> memory management issues ( i.e clean un-used DOM elements)
+-> performance issues ( i.e minimal DOM access)
+-> code re-usability / organization
+-> too much code
+
+
+Legacy solution:
+
+-> server-side page technologies
+
+    -> .jsp / ASP..net , php , thymeleaf,...
+
+Limitations with server-side page technologies:
+
+-> on every request, server-side programs should reconstruct the page, keeping client's state
+-> on every new page response, browser re-loads current page
+-> on every response, transfering static resources, increase n/w bandwidth,
+
+
+Modern Solution:
+
+- Using client-side page technologies
+
+How ?
+
+    -> Modern browsers
+    -> Advanced javascript
+    +
+    -> Many third-party javascript libraries and frameworks
+
+
+third-party javascript libraries and frameworks
+--------------------------------------------------
+
+1. jquery
+
+
+mvc pattern based javascript library and frameworks
+
+2. Backbone.js
+3. Knockout.js
+4. Ember.js
+5. dojo
+6. Ext.js
+7. Angular.js
+
+component pattern based javascript library and frameworks
+
+8. React.js 
+7. Angular( our focus )
+9. Vue.js
+
+----------------------------------------------------------------

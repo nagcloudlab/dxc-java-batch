@@ -1,0 +1,12 @@
+<div class="card m-4">
+    <div class="card-body">
+        <app-header [title]="title"></app-header>
+        <hr />
+        <button (click)="toggleCart()" type="button" class="btn btn-danger">
+            {{isCartOpen ? 'Products' : 'Cart'}}
+        </button>
+        <hr />
+        <app-cart-view *ngIf="isCartOpen"></app-cart-view>
+        <app-product-list *ngIf="!isCartOpen"></app-product-list>
+    </div>
+</div>
